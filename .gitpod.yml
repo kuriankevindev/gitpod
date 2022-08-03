@@ -4,6 +4,10 @@ tasks:
     before: echo 'before script'
     init: echo 'init script' # runs during prebuild
     command: echo 'start script'
+  - name: TerminalCowsay
+    before: echo 'before script cowsay'
+    init: sudo apt-get install cowsay -y
+    command: echo 'start script cowsay'
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
